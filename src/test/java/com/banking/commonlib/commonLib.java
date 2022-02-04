@@ -13,10 +13,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import com.banking.geniclib.basetest;
+import com.banking.genriclib.basetest;
 import com.google.common.io.Files;
 
-public class commonUtility extends basetest {
+public class commonLib extends basetest {
 
 	public String getTitle()
 	{
@@ -63,8 +63,7 @@ public class commonUtility extends basetest {
 	{
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		String path = "C:\\Users\\Dell\\eclipse-workspace\\"
-				+ "com.banking.demo\\Screenshots"+ Screenshotname+".png";
+		String path = "C:\\Users\\Windows 10\\git\\ebanking.demo"+ Screenshotname+".png";
 		File dest = new File(path);
 		try {
 			Files.copy(src, dest);

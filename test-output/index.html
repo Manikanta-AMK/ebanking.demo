@@ -51,12 +51,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\Dell\eclipse-workspace\com.banking.demo\testng.xml</span>
+                    <span>C:\Users\Windows 10\git\ebanking.demo\crossbrowsing.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">3 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content skipped suite-Suite">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.banking.tests.Tc_LoginTest" class="method navigator-link" hash-for-method="logintest">logintest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.banking.tests.TC_InvalidLoginTest" class="method navigator-link" hash-for-method="invalidlogin">invalidlogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Suite -->
@@ -123,7 +123,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.banking.tests.Tc_LoginTest" class="method navigator-link" hash-for-method="logintest">logintest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.banking.tests.Tc_LoginTest" class="method navigator-link" hash-for-method="verifyPagetitle">verifyPagetitle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -141,30 +141,29 @@
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">com.banking.tests.Tc_LoginTest</span>
+              <span class="class-name">com.banking.tests.TC_InvalidLoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="logintest">
-                  </a> <!-- logintest -->
-                  <span class="method-name">logintest</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out waiting for page to load.
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-113KK5G&apos;, ip: &apos;192.168.43.100&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.edgechromium: false, ie.edgepath: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:15107/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d7fb800c-cd6a-423b-b7b3-1a82a5b36852
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at com.banking.geniclib.basetest.setup(basetest.java:43)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 30 stack frames
+                  <a name="invalidlogin">
+                  </a> <!-- invalidlogin -->
+                  <span class="method-name">invalidlogin</span>
+                  <div class="stack-trace">java.lang.RuntimeException: java.lang.NoSuchFieldError: Factory
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: java.lang.NoSuchFieldError: Factory
+	at org.apache.poi.xssf.model.ThemesTable.readFrom(ThemesTable.java:119)
+	at org.apache.poi.xssf.model.ThemesTable.&lt;init&gt;(ThemesTable.java:87)
+	at org.apache.poi.ooxml.POIXMLFactory.createDocumentPart(POIXMLFactory.java:61)
+	at org.apache.poi.ooxml.POIXMLDocumentPart.read(POIXMLDocumentPart.java:661)
+	at org.apache.poi.ooxml.POIXMLDocument.load(POIXMLDocument.java:165)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:274)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:304)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:300)
+	at com.banking.xlUtils.excelUtils.getRowCount(excelUtils.java:39)
+	at com.banking.tests.TC_InvalidLoginTest.getData(TC_InvalidLoginTest.java:71)
+	... 25 more
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -185,9 +184,9 @@ Session ID: d7fb800c-cd6a-423b-b7b3-1a82a5b36852
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="logintest">
-                  </a> <!-- logintest -->
-                  <span class="method-name">logintest</span>
+                  <a name="verifyPagetitle">
+                  </a> <!-- verifyPagetitle -->
+                  <span class="method-name">verifyPagetitle</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -195,31 +194,24 @@ Session ID: d7fb800c-cd6a-423b-b7b3-1a82a5b36852
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Dell\eclipse-workspace\com.banking.demo\testng.xml</span>
+            <span class="header-content">C:\Users\Windows 10\git\ebanking.demo\crossbrowsing.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;3&quot; name=&quot;Test1&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.banking.commonlib.report&quot;/&gt;
+    &lt;listener class-name=&quot;com.banking.commonlib.listeners&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.banking.tests.Tc_LoginTest&quot;/&gt;
+      &lt;class name=&quot;com.banking.tests.TC_InvalidLoginTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test1 --&gt;
-  &lt;test thread-count=&quot;3&quot; name=&quot;test2&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;microsoftedge&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.banking.tests.Tc_LoginTest&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- test2 --&gt;
-  &lt;test thread-count=&quot;3&quot; name=&quot;test3&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;ie&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.banking.tests.Tc_LoginTest&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- test3 --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -231,13 +223,7 @@ Session ID: d7fb800c-cd6a-423b-b7b3-1a82a5b36852
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test1 (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">test2 (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">test3 (1 class)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -267,20 +253,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'logintest')
 data.setCell(0, 2, 'com.banking.tests.Tc_LoginTest')
-data.setCell(0, 3, 39589);
+data.setCell(0, 3, 12145);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'logintest')
+data.setCell(1, 1, 'verifyPagetitle')
 data.setCell(1, 2, 'com.banking.tests.Tc_LoginTest')
-data.setCell(1, 3, 7912);
+data.setCell(1, 3, 68);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'logintest')
-data.setCell(2, 2, 'com.banking.tests.Tc_LoginTest')
+data.setCell(2, 1, 'invalidlogin')
+data.setCell(2, 2, 'com.banking.tests.TC_InvalidLoginTest')
 data.setCell(2, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 47 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -313,37 +299,26 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">logintest</span>
-                <span class="method-start">48426 ms</span>
+                <span class="method-start">18991 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">56455 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(microsoftedge)</span>
-                <span class="method-start">57597 ms</span>
-              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">logintest</span>
-                <span class="method-start">111160 ms</span>
+                <span class="method-name">verifyPagetitle</span>
+                <span class="method-start">31197 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">150751 ms</span>
+                <span class="method-start">31267 ms</span>
               </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.banking.tests.TC_InvalidLoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">setup(ie)</span>
-                <span class="method-start">152425 ms</span>
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">32611 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">logintest</span>
-                <span class="method-start">469758 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">469770 ms</span>
+                <span class="method-start">50755 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

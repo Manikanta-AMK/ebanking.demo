@@ -1,4 +1,4 @@
-package com.banking.geniclib;
+package com.banking.genriclib;
 
 import java.io.File;
 import java.io.FileInputStream;

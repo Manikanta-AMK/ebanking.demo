@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 public class loginpage {
 
@@ -18,6 +17,7 @@ public class loginpage {
 	@FindBy(name="uid") WebElement un;
 	@FindBy(name="password") WebElement pwd;
 	@FindBy(xpath="//input[@type='submit']") WebElement lgBtn;
+	@FindBy(xpath="//a[text()=\"Log out\"]") WebElement lgoutbtn;
 	
 	public void setun(String username)
 	{
@@ -34,10 +34,9 @@ public class loginpage {
 		lgBtn.click();
 	}
 	
-	public void pagetitle()
+	public void logoutbtn()
 	{
-		String PT = "Guru99 Bank Manager HomePage";
-		Assert.assertEquals(ldriver.getTitle(), PT);
+		lgoutbtn.click();
 	}
 	
 	
